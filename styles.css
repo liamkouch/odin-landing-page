@@ -1,7 +1,8 @@
+/*
 * {
     border-style: solid;
     border-color: red;
-}
+}*/
 
 /*Try to add pseudoclasses such as article p:hover {}*/
 
@@ -22,27 +23,30 @@ info
 quote
 footer
 */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     /*padding: 0px;*/
     margin: 0px;
-    background-color: pink;
-    /*background: url(images/pexels-tiff-ng-cropped.jpg);
-    background-size: cover;*/
+    /*background-color: pink;*/
+    background: url(images/pexels-aleksandar.jpg);
+    background-size: cover;
+    color: white;
 } 
 
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    /*align-items: center*/
     height: 50px;
 
-
     /*width: 100%;*/
-    background-color: blue;
-    opacity: 0.5;
+    /*background-color: blue;*/
+    /*opacity: 0.5;*/
 }
 
 header .logo {
@@ -54,13 +58,7 @@ header .logo {
 
     /*margin-left: 30px;*/
     /*margin-right: 30px;*/
-    background-color: yellow;
-    opacity: 1;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    /*background-color: yellow;*/
 
     display: flex;
     flex-direction: column;
@@ -81,16 +79,13 @@ header .nav {
 
     /*margin-left: 30px;*/
     /*margin-right: 30px;*/
-    background-color: yellow;
-    opacity: 1;
+
+    /*background-color: yellow;*/
 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-
-    
-    text-align: center;
 }
 
 li {
@@ -103,36 +98,81 @@ li {
 }
 
 
-
 div.intro {
+    flex: 1;
+
+    /*background-color: green;*/
+    text-shadow: 5px 5px 40px white;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    flex: 1;
-
-    background-color: green;
-    opacity: 0.5;
 }
 
+/*
 .intro > div {
     flex-basis: auto;
     flex-grow: 1;
     flex-shrink: 0;
 
     height: 750px;
-    width: 300px;
+    width: 500px;
 
-    background-color: blue;
-    opacity: 0.5;
+    opacity: 1;
     color: white;
+}*/
+
+.intro_text {
+    height: 750px;
+    width: 500px;
+    flex-grow: 1;
+
+    /*background-color: blue;*/
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+.intro_text > .intro_text_container {
+    height: 750px;
+    width: 400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    /*flex-basis: 0*/
+    
+    /*background-color: pink;*/
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+}
+
+.intro_text_container div:first-child {
+    font-size: 45px;
+    /*background-color: green;*/
+}
+
+.intro_text_container div:nth-child(2) {
+    font-size: 20px;
+    /*background-color: rgb(0, 128, 66);*/
+}
+
+.intro_text_container div:last-child {
+    text-align: center;
 }
 
 .empty_space {
     height: 750px;
-    width: 300px;
-    background-color: green;
-    opacity: 0.5;
+    width: 500px;
+    flex-grow: 1;
+
+    /*background-color: green;*/
+    color: white;
 }
 
 div.info {
@@ -145,7 +185,6 @@ div.info {
     justify-content: center;
 
     background-color: black;
-    opacity: 0.5;
 }
 
 .info > div {
@@ -155,10 +194,11 @@ div.info {
     flex-wrap: wrap;
     justify-content: center;
 
-    background: yellow;
-    opacity: 0.5;
+    /*background: yellow;*/
     border-style: solid;
     border-color: blue;
+
+    text-align: center;
 }
 
 .data-title {
@@ -173,8 +213,7 @@ div.info {
     flex-shrink: 0;
     flex-basis: auto;
 
-    background: orange;
-    opacity: 0.5;
+    /*background: orange;*/
 }
 
 .quote {
@@ -184,8 +223,8 @@ div.info {
 
     justify-content: center;
 
-    background-color: blue;
-    opacity: 0.5;
+    /*background-color: blue;*/
+
 }
 
 .quote > div {
@@ -197,17 +236,17 @@ div.info {
 
     font-size: 50px;
     color: white;
-    background-color: greenyellow;
-    opacity: 0.5;
+    text-shadow: 5px 5px 40px white;
+    /*background-color: greenyellow;*/
 }
 
 .footer {
     height: 300px;
-    background: white;
+    /*background: white;*/
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
 }
@@ -219,7 +258,6 @@ div.info {
     flex-shrink: 1;
     flex-basis: auto;
     background-color: grey;
-    opacity: 1;
 
     display: flex;
     flex-direction: column;
@@ -236,8 +274,7 @@ div.info {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
-    background-color: orange;
-    opacity: 1;
+    /*background-color: orange;*/
 
     display: flex;
     flex-direction: row;
@@ -246,43 +283,12 @@ div.info {
     align-items: center;
 }
 
-/*
-.text {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    background-color: red;
-    opacity: 0.8;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-.button {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    background-color: orangered;
-    opacity: 0.8;
-
-    text-align: center; 
-}
-*/
-
-
-
-
-
-
 .text {
     /*height: 50px;*/
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
-    background-color: green;
-    opacity: 0.8;
+    /*background-color: green;*/
 
     display: flex;
     flex-direction: column;
@@ -293,5 +299,13 @@ div.info {
 .text > p {
     margin: 0px;
     padding: 0px;
-    background-color: blue;
+    /*background-color: blue;*/
+}
+
+.copyright {
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
